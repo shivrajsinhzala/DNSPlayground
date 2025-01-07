@@ -1,7 +1,7 @@
 import { createResponse, createTxtAnswer, startUdpServer } from "denamed";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const GEMINI_API_KEY = "AIzaSyDbpZyXOuORdbzP5-n4D7hDkuPiJ-cPAt0";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash-8b",
